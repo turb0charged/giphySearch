@@ -20,3 +20,4 @@ You can follow the steps at the following [stackoverflow answer](https://stackov
 2. I would look at adapting Diffable Data Sources as that would allow the implementation of pre-fetching to aid smooth scrolling performance
 3. Auto-suggest drop-down on search bar
 4. Add pagination requests
+5. Add the ability to favorite a gif and have a favorites view navigated to via tab
