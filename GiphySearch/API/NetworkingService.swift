@@ -20,16 +20,16 @@ class NetworkingService: Networking {
 
     func request(query term: String, completionHandler: @escaping (Result<Data, NetworkError>) -> Void) async {
         var components = URLComponents()
-        components.scheme = "https"
-        components.host = "api.giphy.com"
-        components.path = "/v1/gifs/search"
+        components.scheme = URLConstants.httpsScheme
+        components.host = URLConstants.host
+        components.path = URLConstants.GifSearch.path
         components.queryItems = [
-            URLQueryItem(name: "api_key", value: "229ac3e932794695b695e71a9076f4e5"),
-            URLQueryItem(name: "limit", value: "50"),
-            URLQueryItem(name: "offset", value: "0"),
-            URLQueryItem(name: "rating", value: "G"),
-            URLQueryItem(name: "lang", value: "en"),
-            URLQueryItem(name: "q", value: term)
+            URLQueryItem(name: URLConstants.GifSearch.apiKeyParam, value:  URLConstants.apiKey),
+            URLQueryItem(name: URLConstants.GifSearch.limitParam, value: "50"),
+            URLQueryItem(name: URLConstants.GifSearch.offsetParam, value: "0"),
+            URLQueryItem(name: URLConstants.GifSearch.ratingParam, value: "G"),
+            URLQueryItem(name: URLConstants.GifSearch.languageParam, value: "en"),
+            URLQueryItem(name: URLConstants.GifSearch.queryParam, value: term)
         ]
         guard let url = components.url else {
             completionHandler(.failure(.malformedURL))
