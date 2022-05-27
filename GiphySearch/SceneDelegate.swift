@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  GiphySearch
 //
-//  Created by Hector Castillo on 5/27/22.
+//  Created by  on 5/27/22.
 //
 
 import UIKit

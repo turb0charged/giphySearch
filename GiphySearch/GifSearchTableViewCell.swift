@@ -2,7 +2,7 @@
     //  GifTableViewCell.swift
     //  GifSearch
     //
-    //  Created by Hector Castillo on 5/26/22.
+    //  Created by  on 5/26/22.
     //
 
 import UIKit
@@ -29,12 +29,10 @@ class GifTableViewCell: UITableViewCell {
         contentView.addSubview(gifImageView)
 
         NSLayoutConstraint.activate([
-            gifImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            gifImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            gifImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            gifImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            gifImageView.centerXAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.centerXAnchor),
-            gifImageView.centerYAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.centerYAnchor)
+            gifImageView.leadingAnchor.constraint(equalTo: contentView.readableContentGuide.leadingAnchor),
+            gifImageView.topAnchor.constraint(equalTo: contentView.readableContentGuide.topAnchor),
+            gifImageView.trailingAnchor.constraint(equalTo: contentView.readableContentGuide.trailingAnchor),
+            gifImageView.bottomAnchor.constraint(equalTo: contentView.readableContentGuide.bottomAnchor)
         ])
     }
 }

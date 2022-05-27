@@ -2,7 +2,7 @@
     //  ViewController.swift
     //  GifSearch
     //
-    //  Created by Hector Castillo on 5/26/22.
+    //  Created by  on 5/26/22.
     //
 
 import UIKit
