@@ -9,13 +9,48 @@ import XCTest
 @testable import GiphySearch
 
 class GiphySearchTests: XCTestCase {
+    private var viewModel: GifSearchViewModel!
+    private var mockNetworkingService: NetworkingServiceMock!
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    override func setUp() {
+        super.setUp()
+        mockNetworkingService = NetworkingServiceMock()
+        viewModel = GifSearchViewModel(networkingService: mockNetworkingService)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        mockNetworkingService = nil
+        viewModel = nil
+
+        super.tearDown()
+    }
+
+    func testSuccess() async {
+        mockNetworkingService.showError = false
+        await viewModel.networkingService.request(query: "test") { [self] result in
+            switch result {
+                case .success(let data):
+                    XCTAssertNotNil(data)
+                    XCTAssertEqual(mockNetworkingService.getCallsCount, 1)
+                    XCTAssertEqual(mockNetworkingService.getArguments.first, "test")
+                case .failure(_):
+                    XCTFail()
+            }
+        }
+    }
+
+    func testFailure() async {
+        mockNetworkingService.showError = true
+        await viewModel.networkingService.request(query: "failTest") { [self] result in
+            switch result {
+                case .success(_):
+                    XCTFail()
+                case .failure(let error):
+                    XCTAssertNotNil(error)
+                    XCTAssertEqual(mockNetworkingService.getCallsCount, 1)
+                    XCTAssertEqual(mockNetworkingService.getArguments.first, "failTest")
+            }
+        }
     }
 
     func testExample() throws {
