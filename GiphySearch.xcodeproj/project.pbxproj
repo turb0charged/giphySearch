@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D5509B42840DA92000BE026 /* GifSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5509B32840DA92000BE026 /* GifSearchViewModel.swift */; };
+		3D5509B72840DAC1000BE026 /* GifQueryResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5509B62840DAC1000BE026 /* GifQueryResultModel.swift */; };
+		3D5509B92840DAF3000BE026 /* GifSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5509B82840DAF3000BE026 /* GifSearchTableViewCell.swift */; };
+		3D5509BB2840DB1E000BE026 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5509BA2840DB1E000BE026 /* NetworkingService.swift */; };
 		3D96DCDF2840D9B000613BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96DCDE2840D9B000613BCA /* AppDelegate.swift */; };
 		3D96DCE12840D9B000613BCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96DCE02840D9B000613BCA /* SceneDelegate.swift */; };
 		3D96DCE32840D9B000613BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96DCE22840D9B000613BCA /* ViewController.swift */; };
-		3D96DCE62840D9B000613BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D96DCE42840D9B000613BCA /* Main.storyboard */; };
 		3D96DCE82840D9B100613BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D96DCE72840D9B100613BCA /* Assets.xcassets */; };
 		3D96DCEB2840D9B100613BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D96DCE92840D9B100613BCA /* LaunchScreen.storyboard */; };
 		3D96DCF62840D9B100613BCA /* GiphySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96DCF52840D9B100613BCA /* GiphySearchTests.swift */; };
 		3D96DD002840D9B100613BCA /* GiphySearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96DCFF2840D9B100613BCA /* GiphySearchUITests.swift */; };
 		3D96DD022840D9B100613BCA /* GiphySearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D96DD012840D9B100613BCA /* GiphySearchUITestsLaunchTests.swift */; };
+		3D96DD102840DA0900613BCA /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3D96DD0F2840DA0900613BCA /* FLAnimatedImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D5509B32840DA92000BE026 /* GifSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchViewModel.swift; sourceTree = "<group>"; };
+		3D5509B62840DAC1000BE026 /* GifQueryResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifQueryResultModel.swift; sourceTree = "<group>"; };
+		3D5509B82840DAF3000BE026 /* GifSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchTableViewCell.swift; sourceTree = "<group>"; };
+		3D5509BA2840DB1E000BE026 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		3D96DCDB2840D9B000613BCA /* GiphySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiphySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D96DCDE2840D9B000613BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D96DCE02840D9B000613BCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3D96DCE22840D9B000613BCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3D96DCE52840D9B000613BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D96DCE72840D9B100613BCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D96DCEA2840D9B100613BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D96DCEC2840D9B100613BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D96DD102840DA0900613BCA /* FLAnimatedImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D5509B52840DAAA000BE026 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D5509B62840DAC1000BE026 /* GifQueryResultModel.swift */,
+				3D5509BA2840DB1E000BE026 /* NetworkingService.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3D96DCD22840D9B000613BCA = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +116,15 @@
 		3D96DCDD2840D9B000613BCA /* GiphySearch */ = {
 			isa = PBXGroup;
 			children = (
+				3D5509B52840DAAA000BE026 /* Models */,
 				3D96DCDE2840D9B000613BCA /* AppDelegate.swift */,
 				3D96DCE02840D9B000613BCA /* SceneDelegate.swift */,
 				3D96DCE22840D9B000613BCA /* ViewController.swift */,
-				3D96DCE42840D9B000613BCA /* Main.storyboard */,
 				3D96DCE72840D9B100613BCA /* Assets.xcassets */,
 				3D96DCE92840D9B100613BCA /* LaunchScreen.storyboard */,
 				3D96DCEC2840D9B100613BCA /* Info.plist */,
+				3D5509B32840DA92000BE026 /* GifSearchViewModel.swift */,
+				3D5509B82840DAF3000BE026 /* GifSearchTableViewCell.swift */,
 			);
 			path = GiphySearch;
 			sourceTree = "<group>";
@@ -143,6 +162,9 @@
 			dependencies = (
 			);
 			name = GiphySearch;
+			packageProductDependencies = (
+				3D96DD0F2840DA0900613BCA /* FLAnimatedImage */,
+			);
 			productName = GiphySearch;
 			productReference = 3D96DCDB2840D9B000613BCA /* GiphySearch.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +237,9 @@
 				Base,
 			);
 			mainGroup = 3D96DCD22840D9B000613BCA;
+			packageReferences = (
+				3D96DD0E2840DA0900613BCA /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+			);
 			productRefGroup = 3D96DCDC2840D9B000613BCA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +258,6 @@
 			files = (
 				3D96DCEB2840D9B100613BCA /* LaunchScreen.storyboard in Resources */,
 				3D96DCE82840D9B100613BCA /* Assets.xcassets in Resources */,
-				3D96DCE62840D9B000613BCA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5509B72840DAC1000BE026 /* GifQueryResultModel.swift in Sources */,
 				3D96DCE32840D9B000613BCA /* ViewController.swift in Sources */,
 				3D96DCDF2840D9B000613BCA /* AppDelegate.swift in Sources */,
 				3D96DCE12840D9B000613BCA /* SceneDelegate.swift in Sources */,
+				3D5509B92840DAF3000BE026 /* GifSearchTableViewCell.swift in Sources */,
+				3D5509BB2840DB1E000BE026 /* NetworkingService.swift in Sources */,
+				3D5509B42840DA92000BE026 /* GifSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +325,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3D96DCE42840D9B000613BCA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D96DCE52840D9B000613BCA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3D96DCE92840D9B100613BCA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,7 +461,6 @@
 				INFOPLIST_FILE = GiphySearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +487,6 @@
 				INFOPLIST_FILE = GiphySearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D96DD0E2840DA0900613BCA /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D96DD0F2840DA0900613BCA /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D96DD0E2840DA0900613BCA /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D96DCD32840D9B000613BCA /* Project object */;
 }
